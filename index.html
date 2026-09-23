@@ -367,6 +367,40 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 @media (max-width:600px){.stack-photos .polaroid:nth-child(2){transform:rotate(-4deg) translate(-6px,6px)}.stack-photos .polaroid:nth-child(3){transform:rotate(5deg) translate(6px,10px)}.theme{margin-left:auto}.nav ul{margin-left:0}.stack-photos{margin-inline:14px}}
 @media (max-width:900px){.stack-photos{max-width:340px;margin-inline:auto}}
+
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;margin:22px 0 4px}
+.kpis div{border-left:3px solid var(--saffron);padding-left:12px}
+.kpis dt{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;color:var(--plum);font-variant-numeric:tabular-nums}
+.kpis dd{margin:4px 0 0;font-size:.85rem;color:var(--muted);line-height:1.3}
+.rstat{font-family:var(--mono);font-size:.7rem;background:color-mix(in srgb,var(--saffron) 18%,transparent);color:var(--saffron-ink);padding:3px 8px;border-radius:999px;margin-right:10px}
+.pts strong{font-weight:600;color:var(--ink)}
+.numbers{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+.numbers div{padding:22px 18px;border-right:1px solid var(--line)}
+.numbers div:last-child{border-right:0}
+.numbers b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1;color:var(--plum);white-space:nowrap;font-variant-numeric:tabular-nums}
+.numbers span{display:block;margin-top:8px;font-size:.84rem;color:var(--muted);line-height:1.35}
+.numbers-wrap{padding-block:clamp(32px,5vw,56px) 0}
+.btn.dl{background:var(--saffron);border-color:var(--saffron);color:#1F1A24}
+.btn.dl:hover{background:color-mix(in srgb,var(--saffron) 85%,#fff)}
+.article{background:var(--surface);border:1px solid var(--line);border-radius:14px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);overflow:hidden}
+.article aside{background:var(--ink);color:var(--paper);padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:14px}
+.article aside .label{color:inherit;opacity:.7}
+.article aside h3{font-size:clamp(1.5rem,2.6vw,2rem)}
+.article aside p{opacity:.8;font-size:.95rem}
+.article .doc{padding:clamp(22px,3vw,40px);max-width:72ch}
+.article .doc h4{font-family:var(--display);font-size:1.15rem;margin:22px 0 8px}
+.article .doc h4:first-child{margin-top:0}
+.article .doc p{margin-bottom:10px}
+.article .doc ol{padding-left:0;list-style:none;counter-reset:st;display:grid;gap:12px;margin:0}
+.article .doc ol li{counter-increment:st;display:grid;grid-template-columns:2rem 1fr;gap:10px}
+.article .doc ol li::before{content:counter(st);font-family:var(--mono);font-size:.8rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--plum-soft);color:var(--plum);display:grid;place-items:center}
+.callout{margin-top:18px;padding:14px 16px;border-radius:10px;background:color-mix(in srgb,var(--saffron) 14%,transparent);font-size:.95rem}
+.callout b{color:var(--saffron-ink)}
+.example{font-family:var(--mono);font-size:.8rem;background:var(--sunk);border-radius:8px;padding:12px 14px;margin-top:8px;white-space:pre-wrap;line-height:1.55}
+.ai-note{display:flex;gap:10px;align-items:flex-start;padding:14px 16px;border-radius:10px;border:1px dashed var(--line);color:var(--muted);font-size:.93rem;margin-top:20px}
+.ai-note b{color:var(--ink)}
+@media (max-width:900px){.numbers{grid-template-columns:repeat(3,minmax(0,1fr))}.numbers div:nth-child(3){border-right:0}.numbers div:nth-child(-n+3){border-bottom:1px solid var(--line)}.article{grid-template-columns:1fr}}
+@media (max-width:600px){.numbers{grid-template-columns:repeat(2,minmax(0,1fr))}.numbers div{border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)}.numbers div:nth-child(2n){border-right:0!important}.rstat{display:none}}
 </style>
 </head>
 <body>
@@ -381,6 +415,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <li><a class="l" href="#fit">Fit</a></li>
       <li><a class="l" href="#builds">Builds</a></li>
       <li><a class="l" href="#iramisu">Iramisu</a></li>
+      <li><a class="l" href="#writing">Writing</a></li>
       <li><a class="l" href="#skills">Skills</a></li>
       <li><a class="l" href="#education">Education</a></li>
       <li><a class="l" href="#contact">Contact</a></li>
@@ -399,6 +434,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <p class="lede">Most recently on the front line of Nova Scotia Health's Oracle Health (Cerner) go-live, training clinicians and resolving issues in real time. Before that: pre-primary and special needs classrooms, a Lindt chocolate counter, and a research lab. The common thread is people.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn dl" href="Iram_Khan_Resume.pdf" target="_blank" rel="noopener">Resume (PDF) ↓</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/khiram" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
@@ -422,11 +458,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 </header>
 
 <div class="marquee" aria-hidden="true"><div class="track">
-  <span>Oracle Health / Cerner</span><b>✦</b><span>Go-live support</span><b>✦</b><span>Client success</span><b>✦</b><span>Payments &amp; reconciliation</span><b>✦</b><span>Group training</span><b>✦</b><span>Assyst ticketing</span><b>✦</b><span>SAP ERPsim</span><b>✦</b><span>Supabase</span><b>✦</b><span>User research</span><b>✦</b><span>Egg-free tiramisu</span><b>✦</b>
-  <span>Oracle Health / Cerner</span><b>✦</b><span>Go-live support</span><b>✦</b><span>Client success</span><b>✦</b><span>Payments &amp; reconciliation</span><b>✦</b><span>Group training</span><b>✦</b><span>Assyst ticketing</span><b>✦</b><span>SAP ERPsim</span><b>✦</b><span>Supabase</span><b>✦</b><span>User research</span><b>✦</b><span>Egg-free tiramisu</span><b>✦</b>
+  <span>Oracle Health / Cerner</span><b>✦</b><span>Go-live support</span><b>✦</b><span>Client success</span><b>✦</b><span>Payments &amp; reconciliation</span><b>✦</b><span>Group training</span><b>✦</b><span>Assyst ticketing</span><b>✦</b><span>SAP ERPsim</span><b>✦</b><span>Built with Claude</span><b>✦</b><span>User research</span><b>✦</b><span>Egg-free tiramisu</span><b>✦</b>
+  <span>Oracle Health / Cerner</span><b>✦</b><span>Go-live support</span><b>✦</b><span>Client success</span><b>✦</b><span>Payments &amp; reconciliation</span><b>✦</b><span>Group training</span><b>✦</b><span>Assyst ticketing</span><b>✦</b><span>SAP ERPsim</span><b>✦</b><span>Built with Claude</span><b>✦</b><span>User research</span><b>✦</b><span>Egg-free tiramisu</span><b>✦</b>
 </div></div>
 
 <main>
+<div class="wrap numbers-wrap">
+  <div class="numbers" aria-label="At a glance">
+    <div><b data-n="200" data-s="+">200+</b><span>support requests resolved at Nova Scotia Health</span></div>
+    <div><b data-n="500" data-s="+">500+</b><span>customers advised monthly at Lindt</span></div>
+    <div><b>15–20</b><span>clinical staff per training group</span></div>
+    <div><b>€27.8M</b><span>team valuation gain in SAP ERPsim</span></div>
+    <div><b data-n="0">0</b><span>cash discrepancies on daily reconciliation</span></div>
+    <div><b>3.96</b><span>GPA / 4.3, Master of Digital Innovation</span></div>
+  </div>
+</div>
+
 <section class="s" id="story">
   <div class="wrap">
     <div class="head">
@@ -446,7 +493,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
           <li><span class="yr">2023</span><div><div class="place">Indore</div><div class="what">PG Diploma, Computer Applications</div></div></li>
           <li><span class="yr">2024</span><div><div class="place">Halifax</div><div class="what">Master of Digital Innovation, Dalhousie University</div></div></li>
           <li><span class="yr">2025</span><div><div class="place">Halifax</div><div class="what">Research, education and retail roles</div></div></li>
-          <li class="now"><span class="yr">2026</span><div><div class="place">Halifax → Toronto</div><div class="what">Support Consultant, Nova Scotia Health · now based in the GTA</div></div></li>
+          <li class="now"><span class="yr">2026</span><div><div class="place">Halifax → Toronto</div><div class="what">Support Consultant, Nova Scotia Health (Jan 2026) · now based in the GTA</div></div></li>
         </ol>
       </div>
     </div>
@@ -457,72 +504,79 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <div class="head">
       <h2>Experience</h2>
-      <p>Healthtech, education, retail and research, with the same job underneath each one: make sure the person in front of me leaves unblocked.</p>
+      <p>Healthtech, retail, research and education, with the same job underneath each one: make sure the person in front of me leaves unblocked.</p>
     </div>
 
     <article class="feature">
       <div>
-        <div class="when"><span class="chip">Feb 2026 – Present</span><span class="chip warm">OPOR-CIS GL240 Go-Live</span></div>
+        <div class="when"><span class="chip">Jan 2026 – Present</span><span class="chip warm">OPOR-CIS GL240 Go-Live</span></div>
         <h3>Support Consultant</h3>
         <p class="org">Nova Scotia Health Authority · Halifax, NS</p>
-        <p class="summary">Part of the support team for the province-wide rollout of the One Person One Record Clinical Information System on Oracle Health (Cerner), helping clinicians and providers work confidently in a brand-new system.</p>
+        <p class="summary">Part of the support team for the province-wide rollout of the One Person One Record Clinical Information System on Oracle Health (Cerner), helping clinicians and staff work confidently in a brand-new system.</p>
+        <dl class="kpis">
+          <div><dt data-n="200" data-s="+">200+</dt><dd>support requests resolved</dd></div>
+          <div><dt>15–20</dt><dd>staff per training group</dd></div>
+          <div><dt data-n="4">4</dt><dd>departments using my job aids</dd></div>
+          <div><dt data-n="2" data-s=" mo">2 mo</dt><dd>to full Cerner proficiency</dd></div>
+        </dl>
         <div class="stack"><span>Oracle Health / Cerner</span><span>PowerChart</span><span>Assyst</span><span>Avaya</span></div>
       </div>
       <ul class="pts">
-        <li>Delivered in-class and on-site support to providers and clinical staff through the go-live, resolving issues as they happened.</li>
-        <li>Led group training sessions for clinical staff on Oracle Health Cerner applications.</li>
-        <li>Supported providers virtually through Avaya as part of the virtual support team, including the OPOR go-live from Westway.</li>
-        <li>Logged, tracked and managed tickets in Assyst, writing clear escalation documentation for deployment teams.</li>
-        <li>Communicated with end users by phone and email with clarity and empathy, and relayed their feedback to drive system improvements.</li>
-        <li>Completed Cerner PowerChart training through IWK Health clinical worksheets.</li>
+        <li>Resolved <strong>200+ inbound support requests</strong> by phone and Avaya by identifying each need, troubleshooting Oracle Health Cerner applications, and escalating complex cases with full documentation.</li>
+        <li>Reached full working proficiency on Oracle Health Cerner <strong>within two months</strong> through hands-on use in a live environment and independent learning.</li>
+        <li>Trained <strong>groups of 15 to 20</strong> clinical and administrative staff, adapting delivery to each audience and following up until every participant was confident.</li>
+        <li>Reduced repeat questions across <strong>four departments</strong> by building job aids, SOPs and reference materials that let staff self-serve.</li>
+        <li>Drove process improvements adopted by the implementation team by spotting recurring patterns in support data and surfacing root causes with clear evidence.</li>
+        <li>Provided in-class and on-site support to providers, and virtual support as part of the OPOR go-live from Westway.</li>
       </ul>
     </article>
 
     <div class="roles">
       <details class="role">
-        <summary><span class="rt">Chocolate Advisor<span class="ro">Lindt Chocolate · Halifax</span></span><span class="rd">Sep 2025 – May 2026</span><span class="plus" aria-hidden="true">+</span></summary>
+        <summary><span class="rt">Chocolate Advisor<span class="ro">Lindt &amp; Sprüngli · Halifax</span></span><span class="rd"><span class="rstat">500+ customers / mo</span>Sep 2025 – May 2026</span><span class="plus" aria-hidden="true">+</span></summary>
         <div class="body"><ul class="pts">
-          <li>Helped customers choose chocolates and gifts, sharing product knowledge to match each visit.</li>
-          <li>Ran the point-of-sale at the counter, processing cash and card transactions.</li>
-          <li>Reconciled the register and settled cash at close.</li>
-          <li>Delivered friendly, efficient service in a busy retail setting, including peak gifting seasons.</li>
+          <li>Advised <strong>500+ customers monthly</strong>, identifying each person's needs and tailoring recommendations, consistently meeting sales targets.</li>
+          <li>Kept a <strong>zero-discrepancy record</strong> on daily cash reconciliation by verifying the drawer and preparing accurate Excel reports each shift.</li>
+          <li>Built a loyal repeat customer base through warm, personalized service.</li>
+          <li>Resolved customer complaints with full ownership: listening, staying calm and following through until each issue was closed.</li>
+          <li>Onboarded and coached new team members through real customer interactions until each could work independently.</li>
         </ul></div>
       </details>
       <details class="role">
-        <summary><span class="rt">Educational Program Assistant (Substitute)<span class="ro">Halifax Regional Centre for Education</span></span><span class="rd">Apr 2025 – Feb 2026</span><span class="plus" aria-hidden="true">+</span></summary>
+        <summary><span class="rt">Research Assistant (Co-op), Digital Transformation &amp; AI Literacy<span class="ro">CORG Labs, Dalhousie University · Halifax</span></span><span class="rd"><span class="rstat">7-month engagement</span>May – Dec 2025</span><span class="plus" aria-hidden="true">+</span></summary>
         <div class="body"><ul class="pts">
-          <li>Provided one-on-one and small group support to students with physical, cognitive and developmental needs.</li>
-          <li>Assisted with daily routines, communication, mobility and sensory needs with patience and care.</li>
-          <li>Worked closely with teachers and resource staff to carry out individualized education plans (IEPs).</li>
-          <li>Built a safe, inclusive space where every child felt seen, supported and capable.</li>
-          <li>Adapted quickly to changing assignments across multiple HRCE schools.</li>
+          <li>Served as primary point of contact for multiple organizational partners across a <strong>seven-month engagement</strong>.</li>
+          <li>Produced recommendations <strong>adopted by leadership</strong> after interviewing the AI Institute Director and turning the insights into written outputs.</li>
+          <li>Designed an AI literacy workshop framework with versions for educators, nonprofits and early-career professionals.</li>
+          <li>Mapped Dalhousie's AI education ecosystem to identify gaps and clarify the College's positioning.</li>
+          <li>Coordinated all project meetings: agendas, minutes and action items followed up until resolved.</li>
+        </ul></div>
+      </details>
+      <details class="role">
+        <summary><span class="rt">Administrative Assistant<span class="ro">Halifax Regional Centre for Education</span></span><span class="rd">Jun 2025 – Feb 2026</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body"><ul class="pts">
+          <li>Answered inbound calls and inquiries from parents, students and staff across multiple schools, triaging each request to the right resource.</li>
+          <li>Maintained accurate records across <strong>two information systems</strong> throughout the academic year.</li>
+          <li>Managed principals' schedules and coordinated meetings, resolving calendar conflicts.</li>
+          <li>Processed incoming documentation and juggled competing priorities under time pressure, accurately and on time.</li>
+        </ul></div>
+      </details>
+      <details class="role">
+        <summary><span class="rt">Educational Program Assistant<span class="ro">Halifax Regional Centre for Education</span></span><span class="rd">May 2025 – Feb 2026</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="body"><ul class="pts">
+          <li>Supported students with diverse and complex needs one-on-one and in groups, adapting communication to each individual.</li>
+          <li>Worked with teachers and resource staff to carry out individualized education plans (IEPs).</li>
+          <li>Assisted with classroom activities, learning exercises and transitions throughout the school day.</li>
+          <li>Communicated daily updates to teachers, parents and staff while maintaining strict confidentiality.</li>
         </ul></div>
       </details>
       <details class="role">
         <summary><span class="rt">Pre-Primary Substitute<span class="ro">Halifax Regional Centre for Education</span></span><span class="rd">Jun 2025 – Feb 2026</span><span class="plus" aria-hidden="true">+</span></summary>
         <div class="body"><ul class="pts">
-          <li>Supported children in the Pre-Primary program under the direction of the Lead Early Childhood Educator, responding to each child's needs.</li>
+          <li>Supported children in the Pre-Primary program under the direction of the Lead Early Childhood Educator.</li>
           <li>Encouraged play-based learning by engaging children's natural curiosity and interests.</li>
           <li>Kept children safe and well, helping with dressing for indoor and outdoor play, toileting and hygiene.</li>
           <li>Prepared materials and snacks and helped keep the classroom inviting and inclusive for every family.</li>
-          <li>Worked as part of the Pre-Primary team and communicated with parents and guardians with care and confidentiality.</li>
-        </ul></div>
-      </details>
-      <details class="role">
-        <summary><span class="rt">Administrative Assistant (Substitute)<span class="ro">Halifax Regional Centre for Education</span></span><span class="rd">Jun 2025 – Feb 2026</span><span class="plus" aria-hidden="true">+</span></summary>
-        <div class="body"><ul class="pts">
-          <li>Managed daily scheduling, recordkeeping and logistics across multiple schools.</li>
-          <li>Kept resource allocation running smoothly and in line with organizational policies.</li>
-          <li>Supported staff and students by streamlining communication and resolving problems quickly.</li>
-        </ul></div>
-      </details>
-      <details class="role">
-        <summary><span class="rt">Research Assistant (Co-op)<span class="ro">CORG Labs, Dalhousie University · Halifax</span></span><span class="rd">May – Dec 2025</span><span class="plus" aria-hidden="true">+</span></summary>
-        <div class="body"><ul class="pts">
-          <li>Analysed the adoption of generative AI to identify process efficiencies.</li>
-          <li>Worked with cross-functional teams to design structured workshop frameworks.</li>
-          <li>Produced detailed research reports used for strategic decision-making.</li>
-          <li>Supported digital transformation projects aligning academic and nonprofit stakeholders.</li>
         </ul></div>
       </details>
     </div>
@@ -542,32 +596,32 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="fit-row" data-fam="support">
         <div><h3>Technical &amp; product support</h3><p class="eg">Technical Support Specialist, Customer Support Specialist, Help Desk</p></div>
         <p class="need">Troubleshoot software issues, manage tickets, escalate well and explain fixes in plain language.</p>
-        <ul class="pts"><li>Managed and escalated tickets in Assyst during a live, province-wide EHR go-live.</li><li>Supported users by phone, email, Avaya virtual support and in person.</li><li>Wrote escalation documentation deployment teams could act on.</li><li>Build and debug my own web apps (Supabase, Netlify, Resend), so I understand how software breaks.</li></ul>
+        <ul class="pts"><li>Resolved 200+ support requests and escalated complex cases in Assyst during a live, province-wide EHR go-live.</li><li>Supported users by phone, email, Avaya virtual support and in person.</li><li>Wrote job aids and SOPs that cut repeat questions across four departments.</li><li>Build and test my own websites with AI tools, so I know how to reproduce a bug and describe it clearly.</li></ul>
       </div>
       <div class="fit-row" data-fam="success">
         <div><h3>Client success &amp; onboarding</h3><p class="eg">Client Success Specialist, Onboarding / Implementation Specialist, Account Coordinator</p></div>
         <p class="need">Get new users confident fast, keep them happy, and feed their needs back to the product team.</p>
-        <ul class="pts"><li>Ran group training sessions for clinical staff on Oracle Health Cerner applications.</li><li>Go-live support is onboarding at scale: new system, stressed users, no room for delay.</li><li>Relayed end-user feedback to deployment teams to drive system improvements.</li><li>Ran user interviews, a 28-person survey and usability tests to shape MealMate around what users actually needed.</li></ul>
+        <ul class="pts"><li>Trained groups of 15 to 20 clinical and administrative staff on Oracle Health Cerner.</li><li>Go-live support is onboarding at scale: new system, stressed users, no room for delay.</li><li>Relayed end-user feedback to deployment teams to drive system improvements.</li><li>Ran user interviews, a 28-person survey and usability tests to shape MealMate around what users actually needed.</li></ul>
       </div>
       <div class="fit-row" data-fam="health">
         <div><h3>Health tech &amp; solutions</h3><p class="eg">Solutions Consultant, Clinical Applications Analyst, EHR Support</p></div>
         <p class="need">Understand clinical workflows and the systems behind them, and translate between the two.</p>
-        <ul class="pts"><li>Hands-on Oracle Health / Cerner experience, plus PowerChart training through IWK Health clinical worksheets.</li><li>Worked alongside clinicians and providers in real clinical settings.</li><li>Researched generative AI adoption and designed workshop frameworks at Dalhousie.</li><li>Privacy by design, Privacy Impact Assessments and patient-information confidentiality.</li></ul>
+        <ul class="pts"><li>Hands-on Oracle Health / Cerner experience, plus PowerChart training through IWK Health clinical worksheets.</li><li>Worked alongside clinicians and providers in real clinical settings.</li><li>Produced AI-literacy recommendations adopted by leadership over a seven-month research engagement.</li><li>Privacy by design, Privacy Impact Assessments and patient-information confidentiality.</li></ul>
       </div>
       <div class="fit-row" data-fam="finance">
         <div><h3>Banking, payments &amp; fund operations</h3><p class="eg">Client Service Associate, Payments Support, Fund / Business Operations Associate</p></div>
         <p class="need">Accuracy with money and data, controls-minded thinking, and calm, trustworthy client service.</p>
-        <ul class="pts"><li>B.Com in Accounting &amp; Tax Management.</li><li>Processed cash and card payments and reconciled the register at Lindt.</li><li>Managed procurement, inventory, cash flow and reconciliations in a live SAP ERPsim simulation.</li><li>Built a Privacy Impact Assessment for a fintech case and ran usability studies on mobile banking 2FA and biometrics.</li></ul>
+        <ul class="pts"><li>B.Com in Accounting &amp; Tax Management.</li><li>Zero-discrepancy daily cash reconciliation at Lindt, with Excel reports each shift.</li><li>Improved team valuation by €27.8M in a live SAP ERPsim simulation.</li><li>Built a Privacy Impact Assessment for a fintech case and ran usability studies on mobile banking 2FA and biometrics.</li></ul>
       </div>
       <div class="fit-row" data-fam="sales">
         <div><h3>Sales &amp; business development</h3><p class="eg">Business Development Representative, Sales Associate, Client Advisor</p></div>
         <p class="need">Start conversations, understand what someone needs, and recommend the right fit with confidence.</p>
-        <ul class="pts"><li>Advised Lindt customers on chocolates and gifts, matching products to each person.</li><li>Ran marketing campaigns that grew membership as Co-VP Marketing of the Digital Innovation Society.</li><li>Built relationships with industry professionals and sponsors for society events.</li><li>Comfortable starting conversations with anyone, from clinicians to first-time customers.</li></ul>
+        <ul class="pts"><li>Advised 500+ Lindt customers monthly and consistently met sales targets.</li><li>Ran marketing campaigns that grew membership as Co-VP Marketing of the Digital Innovation Society.</li><li>Built relationships with industry professionals and sponsors for society events.</li><li>Comfortable starting conversations with anyone, from clinicians to first-time customers.</li></ul>
       </div>
       <div class="fit-row" data-fam="ops">
         <div><h3>Operations &amp; coordination</h3><p class="eg">Operations Coordinator, Program Coordinator, Administrative / Recruitment Coordinator</p></div>
         <p class="need">Keep schedules, records and people moving, with discretion and attention to detail.</p>
-        <ul class="pts"><li>Managed scheduling, recordkeeping and logistics across multiple schools.</li><li>Organized and promoted events, workshops and networking sessions.</li><li>Handled confidential student, family and patient information.</li><li>Planned and ran projects end to end, including building and deploying the Iramisu ordering site.</li></ul>
+        <ul class="pts"><li>Managed scheduling, recordkeeping and logistics across multiple schools.</li><li>Organized and promoted events, workshops and networking sessions.</li><li>Handled confidential student, family and patient information.</li><li>Planned and ran projects end to end, including planning and launching the Iramisu site with Claude.</li></ul>
       </div>
     </div>
   </div>
@@ -578,7 +632,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <div class="head">
       <h2>Things I've built</h2>
-      <p>I learn tools by shipping something with them. Two solo builds I designed and deployed myself, and a team product we took from research to working prototype.</p>
+      <p>I design and ship websites with AI. I bring the idea, the content and the user flow, write the prompts, test every screen and deploy it. Claude writes the code.</p>
     </div>
     <div class="builds">
       <article class="build big spot tilt">
@@ -588,21 +642,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         </div>
         <span class="label" style="color:inherit;opacity:.7">Solo side project · web app</span>
         <h3>Iramisu</h3>
-        <p class="muted">A full online shop for my tiramisu side project, built from scratch as a single page. It has 12+ egg-free flavours with category filters, a layer-by-layer breakdown and size choice for each jar, a cart that turns into a ready-to-send order email, a brand story, and a mini game to make browsing fun.</p>
+        <p class="muted">A full online shop for my tiramisu side project, which I designed and built with Claude. I planned the flavours, copy and ordering flow, directed the build through prompts and tested every step. It has 12+ egg-free flavours with category filters, a layer-by-layer breakdown and size choice for each jar, a cart that turns into a ready-to-send order email, a brand story, and a mini game to make browsing fun.</p>
         <div class="flow" aria-label="How an order flows">
           <span>Browse flavours</span><i>→</i><span>Pick size</span><i>→</i><span>Cart</span><i>→</i><span>Order email</span>
         </div>
-        <p class="muted" style="font-size:.93rem">A second version adds a real backend: Supabase for orders, Resend for email confirmations and an admin dashboard to manage them, deployed on Netlify.</p>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span><span>Supabase</span><span>Resend</span><span>Netlify</span></div>
+        <p class="muted" style="font-size:.93rem">A second version, also built with Claude, connects Supabase for orders, Resend for confirmation emails and an admin dashboard, deployed on Netlify.</p>
+        <div class="stack"><span>Built with Claude</span><span>Prompt design</span><span>User testing</span><span>GitHub Pages</span><span>Supabase</span><span>Netlify</span></div>
         <a class="go" href="https://iramkhan19.github.io/Iramisu/" target="_blank" rel="noopener">Visit the site ↗</a>
       </article>
       <article class="build">
         <span class="label">This page</span>
         <h3>This portfolio</h3>
-        <p class="muted">Designed and shipped as a single self-contained page on GitHub Pages. No frameworks, works in light and dark mode.</p>
-        <div class="stack"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
+        <p class="muted">Designed with Claude from my own content, photos and resume, then published on GitHub Pages. I decided the story, structure and interactions; Claude handled the code.</p>
+        <div class="stack"><span>Built with Claude</span><span>Content &amp; UX</span><span>GitHub Pages</span></div>
       </article>
     </div>
+    <p class="ai-note"><span>✦</span><span><b>How I build:</b> I don't hand-write code. I work like a product owner with an AI developer: I plan the pages and flows, write detailed prompts, review what comes back, test it like a user and iterate until it works. It is the same skill I use in support: describe the problem precisely, check the fix, repeat.</span></p>
 
     <article class="case tilt" id="mealmate">
       <div class="case-shots"><div class="shots-inner">
@@ -621,10 +676,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         </dl>
         <ul class="pts">
           <li>Turned survey findings into features: three clear price tiers (64% wanted $5–10 meals), a Student Resources section for discounts (85% said deals would help) and culturally relevant cuisines.</li>
-          <li>Built a chatbot that filters by cuisine, budget and offers, on an HTML/CSS/JavaScript front end with Node.js and MongoDB.</li>
+          <li>Our team built a chatbot that filters by cuisine, budget and offers (front end in HTML/CSS/JavaScript, Node.js and MongoDB behind it).</li>
           <li>Ran timed usability tests, then simplified preference setup, added restaurant ratings, price ranges and student discounts, and created a "My Meal Plan" page to build trust.</li>
         </ul>
-        <div class="stack"><span>User research</span><span>Surveys</span><span>Usability testing</span><span>Node.js</span><span>MongoDB</span><span>JavaScript</span></div>
+        <div class="stack"><span>User research</span><span>Surveys</span><span>Usability testing</span><span>Team build</span></div>
       </div>
     </article>
   </div>
@@ -649,6 +704,41 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   </div>
 </section>
 
+<section class="s" id="writing">
+  <div class="wrap">
+    <div class="head">
+      <h2>Writing sample</h2>
+      <p>A short help article in the style of the job aids I write for staff: plain words, one action per step, and the why behind it.</p>
+    </div>
+    <article class="article">
+      <aside>
+        <span class="label">Help centre · 3 min read</span>
+        <h3>Get your support ticket solved faster</h3>
+        <p>For anyone reporting a problem with a new system. Written from the support side of 200+ go-live requests.</p>
+        <div class="stack"><span style="color:inherit;border-color:color-mix(in srgb,var(--paper) 30%,transparent)">Knowledge base</span><span style="color:inherit;border-color:color-mix(in srgb,var(--paper) 30%,transparent)">End users</span></div>
+      </aside>
+      <div class="doc">
+        <h4>Before you call or submit a ticket</h4>
+        <p>Most delays happen because the support team has to come back and ask questions. Gather these five details first and your issue can often be fixed on the first contact.</p>
+        <ol>
+          <li><div><b>Say what you were trying to do.</b> "Place a lab order for a patient" tells us far more than "the system isn't working."</div></li>
+          <li><div><b>Note exactly what happened.</b> Copy the error message word for word, or take a screenshot. Hide any patient or client details first.</div></li>
+          <li><div><b>Check if it happens again.</b> Try once more. Does it happen every time, or only sometimes? Only for you, or for colleagues too?</div></li>
+          <li><div><b>Share where and when.</b> Your location or department, the device you used, and the time it happened.</div></li>
+          <li><div><b>Tell us how urgent it is.</b> Is anyone blocked from working, or is there a workaround for now?</div></li>
+        </ol>
+        <h4>What a great ticket looks like</h4>
+        <div class="example">Trying to: print a discharge summary
+What happened: "Unable to print: no default printer" (screenshot attached)
+Happens: every time, 2 colleagues see it too
+Where / when: 3rd floor unit, workstation 12, since 9:40 am
+Urgency: blocking discharges, no workaround yet</div>
+        <p class="callout"><b>Why this works:</b> the support team can reproduce the problem, route it to the right team the first time, and skip the back-and-forth.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="s" id="skills">
   <div class="wrap">
     <div class="head">
@@ -657,11 +747,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
     <div class="skill-banner" id="skillBanner"><span id="skillText"></span><button type="button" id="skillClear">Show all</button></div>
     <div class="skills">
-      <div><h3>Support &amp; service</h3><ul><li data-f="support ops">Ticket triage &amp; escalation (Assyst)</li><li data-f="support success">Phone, email &amp; virtual support (Avaya)</li><li data-f="support health">In-person, at-the-desk support</li><li data-f="support">Troubleshooting &amp; root-cause questions</li><li data-f="support ops">Escalation documentation</li><li data-f="support health success">Calm under go-live pressure</li><li data-f="ops support">Microsoft 365</li></ul></div>
+      <div><h3>Support &amp; service</h3><ul><li data-f="support ops">Ticket triage &amp; escalation (Assyst)</li><li data-f="support success">Phone, email &amp; virtual support (Avaya)</li><li data-f="support health">In-person, at-the-desk support</li><li data-f="support">Troubleshooting &amp; root-cause questions</li><li data-f="support ops">Escalation documentation</li><li data-f="support health success">Calm under go-live pressure</li><li data-f="ops support">Microsoft 365, SharePoint</li><li data-f="support success">Job aids, SOPs &amp; knowledge base</li></ul></div>
       <div><h3>Client success &amp; training</h3><ul><li data-f="success health">Group training &amp; facilitation</li><li data-f="success support">End-user onboarding</li><li data-f="success support sales">Explaining technical topics simply</li><li data-f="success support">Feedback loops to product teams</li><li data-f="success sales">Relationship building</li><li data-f="sales finance">Customer recommendations &amp; sales conversations</li><li data-f="success health">User interviews, surveys &amp; usability testing</li><li data-f="sales">Marketing campaigns</li></ul></div>
-      <div><h3>Health IT</h3><ul><li data-f="health support">Oracle Health / Cerner</li><li data-f="health">PowerChart</li><li data-f="health support success">EHR go-live support</li><li data-f="health">Clinical workflow awareness</li><li data-f="health ops">Patient-information confidentiality</li><li data-f="health finance">Privacy by design</li><li data-f="health finance">Privacy Impact Assessments</li></ul></div>
+      <div><h3>Health IT</h3><ul><li data-f="health support">Oracle Health / Cerner</li><li data-f="health">PowerChart, PowerTrials, scheduling, order entry</li><li data-f="health support success">EHR go-live support</li><li data-f="health">Clinical workflow awareness</li><li data-f="health ops">Patient-information confidentiality</li><li data-f="health finance">Privacy by design</li><li data-f="health finance">Privacy Impact Assessments</li></ul></div>
       <div><h3>Finance &amp; payments</h3><ul><li data-f="finance sales">Cash &amp; card payment processing</li><li data-f="finance ops">Register reconciliation &amp; cash settlement</li><li data-f="finance">Financial controls</li><li data-f="finance">Accounting principles</li><li data-f="finance">Tax management</li><li data-f="finance ops">Financial reporting</li><li data-f="finance ops">SAP (ERPsim)</li></ul></div>
-      <div><h3>Data &amp; tech</h3><ul><li data-f="finance ops">Power BI, Tableau, IBM Cognos</li><li data-f="support finance">SQL</li><li data-f="support">Python</li><li data-f="finance ops">Excel</li><li data-f="support">HTML, CSS, JavaScript</li><li data-f="support">Node.js, MongoDB</li><li data-f="support">Supabase, Netlify, Resend</li><li data-f="support health">AI-assisted building with Claude</li></ul></div>
+      <div><h3>Data &amp; tech</h3><ul><li data-f="finance ops">Power BI, Tableau, IBM Cognos</li><li data-f="support finance">SQL</li><li data-f="support">Python</li><li data-f="finance ops">Excel (pivot tables, VLOOKUP)</li><li data-f="support health">AI-assisted website building (Claude)</li><li data-f="support success">Prompt engineering</li><li data-f="support">GitHub Pages, Supabase, Netlify</li></ul></div>
       <div><h3>Ways of working</h3><ul><li data-f="ops success">Stakeholder coordination</li><li data-f="ops">Scheduling &amp; recordkeeping</li><li data-f="ops sales">Event planning</li><li data-f="ops health">Agile / Scrum</li><li data-f="success sales">Cross-cultural fluency</li><li data-f="finance ops">Attention to detail</li><li data-f="support health success">Fast learner of new systems</li></ul></div>
     </div>
   </div>
@@ -673,7 +763,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div>
         <h2 class="sub">Education</h2>
         <ul class="list">
-          <li><span class="d">Sep 2024 – Dec 2025</span><span class="t">Master of Digital Innovation, Digital Business</span><span class="m">Dalhousie University, Halifax · Analytics &amp; data visualization, change management, digital transformation, usability, security &amp; privacy</span></li>
+          <li><span class="d">Sep 2024 – Dec 2025</span><span class="t">Master of Digital Innovation, Digital Business · GPA 3.96/4.3</span><span class="m">Dalhousie University, Halifax · Analytics &amp; data visualization, change management, digital transformation, usability, security &amp; privacy</span></li>
           <li><span class="d">Jul 2022 – May 2023</span><span class="t">PG Diploma, Computer Applications</span><span class="m">Devi Ahilya University, India · Systems analysis &amp; design, web design, RDBMS with Oracle, networking</span></li>
           <li><span class="d">Aug 2019 – May 2022</span><span class="t">B.Com, Accounting &amp; Tax Management</span><span class="m">Devi Ahilya University, India · Financial management, business statistics, strategic tax management, MIS</span></li>
         </ul>
@@ -681,7 +771,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div>
         <h2 class="sub">Certificates</h2>
         <div class="certs">
-          <span>Business Analysis Foundation <small>· PMI</small></span>
+          <span>Business Analysis Foundations <small>· PMI</small></span>
+          <span>Introduction to Business Analytics <small>· IIBA</small></span>
           <span>Scrum Master + Agile Scrum <small>· EC-Council</small></span>
           <span>Foundations of SQL <small>· ShiftKey Labs</small></span>
           <span>Data Analytics with Python <small>· ShiftKey Labs</small></span>
@@ -694,10 +785,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
     <h2 class="sub" style="margin-top:clamp(48px,7vw,80px)">Selected academic projects</h2>
     <div class="projects">
+      <div class="proj"><h3>DemoFlow PersonaShift</h3><p>Capstone: designed an adaptive B2B presentation tool with a four-person team using Double Diamond and user interviews, with high-fidelity mockups and a two-year roadmap.</p><div class="stack"><span>Product design</span><span>Roadmap</span></div></div>
+      <div class="proj"><h3>Axonic go-to-market</h3><p>Built a phased B2B-to-B2C go-to-market strategy from a competitive analysis of five players.</p><div class="stack"><span>Market research</span><span>Strategy</span></div></div>
       <div class="proj"><h3>Privacy Impact Assessment</h3><p>A full PIA framework for a fictional fintech case: data retention, risk analysis, compliance monitoring and CAPA recommendations.</p><div class="stack"><span>Privacy</span><span>Fintech</span></div></div>
-      <div class="proj"><h3>IBM Cognos analytics</h3><p>Dashboards and KPI reports analysing Walmart expansion and state-level energy dependence.</p><div class="stack"><span>Cognos</span><span>KPIs</span></div></div>
+      <div class="proj"><h3>IBM Cognos analytics</h3><p>Delivered a leadership recommendations report from a large dataset, with interactive dashboards in Cognos and Excel.</p><div class="stack"><span>Cognos</span><span>KPIs</span></div></div>
       <div class="proj"><h3>SOC simulation</h3><p>Investigated phishing and intrusion scenarios on TryHackMe, then proposed encryption and access-control policy changes.</p><div class="stack"><span>Security</span><span>Compliance</span></div></div>
-      <div class="proj"><h3>SAP ERPsim</h3><p>Ran procurement, pricing, inventory and cash flow in a live SAP simulation, including MRP runs and reconciliations under time pressure.</p><div class="stack"><span>SAP</span><span>ERP</span></div></div>
+      <div class="proj"><h3>SAP ERPsim</h3><p>Improved team valuation by <strong>€27.8M</strong> across rounds by configuring core ERP modules and analyzing financial performance in Excel.</p><div class="stack"><span>SAP</span><span>ERP</span></div></div>
       <div class="proj"><h3>Biometric &amp; 2FA studies</h3><p>Designed and ran user studies on mobile banking and workplace authentication, balancing usability with compliance.</p><div class="stack"><span>UX research</span><span>Security</span></div></div>
     </div>
   </div>
@@ -729,6 +822,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="cards">
         <div class="cline"><div><div class="lbl">Email</div><a class="val" href="mailto:iram.khan.1908@gmail.com">iram.khan.1908@gmail.com</a></div><button class="copy" type="button" data-copy="iram.khan.1908@gmail.com">Copy</button></div>
         <div class="cline"><div><div class="lbl">Phone</div><span class="val">782 882 2074</span></div><button class="copy" type="button" data-copy="7828822074">Copy</button></div>
+        <div class="cline"><div><div class="lbl">Resume</div><a class="val" href="Iram_Khan_Resume.pdf" target="_blank" rel="noopener">Iram_Khan_Resume.pdf</a></div><span class="copy" aria-hidden="true">↓</span></div>
         <div class="cline"><div><div class="lbl">LinkedIn</div><a class="val" href="https://www.linkedin.com/in/khiram" target="_blank" rel="noopener">linkedin.com/in/khiram</a></div><span class="copy" aria-hidden="true">↗</span></div>
       </div>
     </div>
@@ -737,7 +831,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Iram Khan · Toronto / GTA</span><span>Built by hand, fuelled by tiramisu.</span></div>
+  <div class="wrap"><span>© 2026 Iram Khan · Toronto / GTA</span><span>Designed with Claude, fuelled by tiramisu.</span></div>
 </footer>
 
 <div class="toast" id="toast" role="status"></div>
